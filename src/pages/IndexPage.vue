@@ -1,7 +1,12 @@
 <template>
-  <q-page class="flex column flex-center">
-    <h5 class="text-center q-px-md">{{ phrases[phraseIndex] }}</h5>
-    <q-btn icon="autorenew" label="Stacked" stack glossy color="purple" @click="randomPosition" />
+  <q-page class="flex column flex-center justify-around">
+    <q-img
+      src="https://www.designi.com.br/images/preview/12831094.jpg"
+      spinner-color="white"
+      style="max-width: 300px"
+    />
+    <h4 class="text-center q-px-md color-white">{{ phrases[phraseIndex] }}</h4>
+    <q-btn class="button" icon="autorenew" label="Atualizar frase" rounded color="dark" @click="randomPosition" />
   </q-page>
 </template>
 
@@ -30,3 +35,12 @@ onMounted(() => {
   randomPosition()
 })
 </script>
+
+<style scoped>
+.q-page {
+  background-color: #f95179;
+}
+.button {
+  width: 90%;
+}
+</style>

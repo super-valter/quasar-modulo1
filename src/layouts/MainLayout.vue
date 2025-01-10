@@ -1,7 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
+    <q-header class="flex justify-between items-center" elevated>
+      <q-toolbar-title class="q-ml-md">
+        Frases
+      </q-toolbar-title>
         <q-btn
           flat
           dense
@@ -10,11 +12,6 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title>
-          Master Learning
-        </q-toolbar-title>
-      </q-toolbar>
     </q-header>
 
     <q-drawer
@@ -68,3 +65,9 @@ function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
+
+<style scoped>
+.q-header {
+  background-color: #f95179 !important;
+}
+</style>
